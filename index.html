@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>مؤسسة التوفيق للتمويل الأصغر</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="translations.js"></script>
+</head>
+<body class="bg-light">
+  <!-- Animated Background -->
+  <div class="animated-bg"></div>
+  
+  <!-- Header with glass effect -->
+  <header class="fixed w-full header-main glass-effect z-50">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center gap-4">
+          <img src="logo.svg" alt="التوفيق" class="h-12">
+          <h1 class="text-2xl font-bold text-primary">مؤسسة التوفيق</h1>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#home" class="nav-link" data-translate="home">الرئيسية</a>
+          <a href="#about" class="nav-link" data-translate="about">من نحن</a>
+          <a href="#services" class="nav-link" data-translate="services">الخدمات</a>
+          <a href="#branches" class="nav-link" data-translate="branches">الفروع</a>
+          <a href="#contact" class="nav-link" data-translate="contact">اتصل بنا</a>
+          <button id="langToggle" class="lang-toggle" onclick="switchLanguage()">
+            <svg class="lang-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+            </svg>
+            <span class="text-sm">FR</span>
+          </button>
+          <a href="#contact" class="btn-funding">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+            </svg>
+            <span data-translate="requestFunding">اطلب تمويل</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with floating elements -->
+  <section id="home" class="min-h-screen pt-24 pb-16">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2 text-center md:text-right section-fade-in" data-aos="fade-up">
+          <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+            معًا من أجل تمويل مستدام <br>
+            <span class="text-green-700">وتنمية مجتمعية</span>
+          </h2>
+          <p class="text-xl text-gray-600 mb-8">
+            أكثر من 20 سنة من الدعم والتمكين المالي للفئات الهشة والمقاولين الصغار
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a href="#services" class="btn-primary">
+              تعرف على خدماتنا
+              <svg class="inline-block w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+            <a href="#contact" class="btn-secondary">تواصل معنا</a>
+          </div>
+        </div>
+        <div class="md:w-1/2 float-element" data-aos="fade-left">
+          <img src="hero-image.svg" alt="التمويل المستدام" class="w-full">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- من نحن -->
+  <section id="about" class="py-20 bg-gradient-to-br from-white to-green-50">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto">
+        <!-- المقدمة -->
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold text-green-800 mb-6">من نحن</h2>
+          <div class="w-24 h-1 bg-green-600 mx-auto mb-8"></div>
+          <p class="text-lg text-gray-600 leading-relaxed" data-translate="aboutDescription">
+            مؤسسة التوفيق للتمويل الأصغر هي مؤسسة مالية وطنية تأسست في عام 2000، وهي تابعة لمجموعة البنك الشعبي المغربي.
+          </p>
+        </div>
+
+        <!-- التاريخ والإنجازات -->
+        <div class="mb-16 space-y-6" data-aos="fade-up" data-aos-delay="100">
+          <p class="text-gray-700 leading-relaxed" data-translate="aboutHistory">
+            تم إنشاؤها بهدف تقديم حلول تمويلية متكاملة ومستدامة للفئات ذات الدخل المحدود والمقاولين الصغار، وخاصة الفئات التي تعاني من صعوبة الوصول إلى التمويل البنكي التقليدي.
+          </p>
+          <p class="text-gray-700 leading-relaxed" data-translate="aboutNetwork">
+            على مدار أكثر من 20 سنة من العمل المتواصل، تمكنت المؤسسة من بناء شبكة واسعة تضم أكثر من 425 فرعًا في مختلف المدن والقرى المغربية، مما يعكس التزامها بالوصول إلى جميع مناطق المملكة وتقديم خدماتها بسهولة ويسر.
+          </p>
+        </div>
+
+        <!-- الرؤية والرسالة -->
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+          <div class="bg-white p-8 rounded-2xl shadow-lg" data-aos="fade-right">
+            <h3 class="text-2xl font-bold text-green-700 mb-4" data-translate="ourVision">رؤيتنا</h3>
+            <p class="text-gray-600 leading-relaxed" data-translate="visionText">
+              نطمح إلى بناء اقتصاد محلي قوي ومستدام من خلال توسيع قاعدة الشمول المالي، وتعزيز روح المبادرة لدى المواطنين.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-lg" data-aos="fade-left">
+            <h3 class="text-2xl font-bold text-green-700 mb-4" data-translate="ourMission">رسالتنا</h3>
+            <p class="text-gray-600 leading-relaxed" data-translate="missionText">
+              تمكين الأفراد والمقاولات الصغرى من خلال توفير حلول تمويلية مرنة ومناسبة.
+            </p>
+          </div>
+        </div>
+
+        <!-- القيم -->
+        <div class="mb-16" data-aos="fade-up">
+          <h3 class="text-2xl font-bold text-green-700 mb-8 text-center">قيمنا الأساسية</h3>
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div class="bg-white p-6 rounded-xl shadow text-center hover:shadow-lg transition-shadow">
+              <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <h4 class="font-bold mb-2">الشفافية</h4>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow text-center hover:shadow-lg transition-shadow">
+              <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2L2 7h3v13h14V7h3L12 2z"/>
+                </svg>
+              </div>
+              <h4 class="font-bold mb-2">المسؤولية</h4>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow text-center hover:shadow-lg transition-shadow">
+              <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2m-8 0l4-2V6m0 12v-6l-4-2m8 0l-4 2v6"/>
+                </svg>
+              </div>
+              <h4 class="font-bold mb-2">التمكين</h4>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow text-center hover:shadow-lg transition-shadow">
+              <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7l9 9L21 4"/>
+                </svg>
+              </div>
+              <h4 class="font-bold mb-2">الجودة</h4>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow text-center hover:shadow-lg transition-shadow">
+              <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </div>
+              <h4 class="font-bold mb-2">المساواة</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- الإنجازات -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg" data-aos="fade-up">
+          <h3 class="text-2xl font-bold text-green-700 mb-6">إنجازاتنا</h3>
+          <ul class="space-y-4 text-gray-600">
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              تمويل آلاف المشاريع الصغيرة والمتوسطة بنجاح
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              توفير فرص عمل مباشرة وغير مباشرة لآلاف المواطنين
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              تحقيق نسبة رضا عالية لدى زبائننا
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- الخدمات -->
+  <section id="services" class="bg-gradient-to-br from-white to-green-50 py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-green-800 mb-4">خدماتنا</h2>
+        <div class="w-24 h-1 bg-green-600 mx-auto mb-8"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">نقدم باقة متكاملة من الحلول التمويلية المصممة خصيصاً لتلبية احتياجاتكم</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- تمويل المشاريع الصغيرة -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4">تمويل المشاريع الصغيرة</h3>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-green-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>مبالغ مرنة تتناسب مع حجم المشروع واحتياجاته</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-green-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>فترة سداد ميسرة مع فوائد منخفضة</span>
+            </li>
+          </ul>
+          <a href="#contact" class="inline-block mt-6 text-green-600 hover:text-green-700 font-semibold">
+            تعرف على المزيد
+            <span class="mr-1">←</span>
+          </a>
+        </div>
+
+        <!-- تمويل المقاولين الذاتيين -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4">تمويل المقاولين الذاتيين</h3>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-green-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>دعم مالي يصل إلى 150,000 درهم</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-green-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>شروط ميسرة وفوائد تنافسية</span>
+            </li>
+          </ul>
+          <a href="#contact" class="inline-block mt-6 text-green-600 hover:text-green-700 font-semibold">
+            تعرف على المزيد
+            <span class="mr-1">←</span>
+          </a>
+        </div>
+
+        <!-- تمويل الأسرة -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-4">تمويل الأسرة</h3>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-green-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>تمويل يصل إلى 70,000 درهم لتحسين السكن</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-green-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>فوائد منخفضة وفترة سداد مرنة</span>
+            </li>
+          </ul>
+          <a href="#contact" class="inline-block mt-6 text-green-600 hover:text-green-700 font-semibold">
+            تعرف على المزيد
+            <span class="mr-1">←</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- مميزات خدماتنا -->
+      <div class="mt-20" data-aos="fade-up">
+        <h3 class="text-2xl font-bold text-center text-green-800 mb-12">مميزات خدماتنا</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h4 class="font-bold mb-2">سهولة وسرعة الإجراءات</h4>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h4 class="font-bold mb-2">شروط مرنة</h4>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h4 class="font-bold mb-2">دعم مستمر</h4>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h4 class="font-bold mb-2">تمويل شامل</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- الفروع -->
+  <section id="branches" class="py-20 bg-gradient-to-br from-white to-green-50">
+    <div class="container mx-auto px-6">
+      <!-- العنوان -->
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-green-800 mb-4">فروعنا</h2>
+        <div class="w-24 h-1 bg-green-600 mx-auto mb-8"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">نمتلك شبكة واسعة تضم أكثر من 425 فرعًا ونقطة بيع في مختلف أنحاء المغرب، تغطي المناطق الحضرية والقروية.</p>
+      </div>
+
+      <!-- المقر الرئيسي -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 mb-12" data-aos="fade-up">
+        <h3 class="text-2xl font-bold text-green-700 mb-6">المقر الرئيسي</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="p-2 bg-green-100 rounded-lg mt-1">
+                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-1">العنوان</h4>
+                <p class="text-gray-600">3، زنقة دكتور فير، إقامة باسيو، الدار البيضاء</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="p-2 bg-green-100 rounded-lg mt-1">
+                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-1">الهاتف</h4>
+                <p class="text-gray-600">05 22 26 90 11 / 05 22 26 90 15</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="p-2 bg-green-100 rounded-lg mt-1">
+                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-1">البريد الإلكتروني</h4>
+                <p class="text-gray-600">contact@fbpmc.ma</p>
+              </div>
+            </div>
+          </div>
+          <div class="h-64 bg-gray-100 rounded-lg" id="map">
+            <!-- هنا يمكن إضافة خريطة Google Maps -->
+          </div>
+        </div>
+      </div>
+
+      <!-- جدول الفروع -->
+      <div class="overflow-x-auto" data-aos="fade-up">
+        <table class="w-full bg-white rounded-xl shadow-lg">
+          <thead class="bg-green-50">
+            <tr>
+              <th class="px-6 py-4 text-right font-bold">اسم الفرع</th>
+              <th class="px-6 py-4 text-right font-bold">العنوان</th>
+              <th class="px-6 py-4 text-right font-bold">الهاتف</th>
+              <th class="px-6 py-4 text-right font-bold">ساعات العمل</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr class="hover:bg-gray-50 transition-colors">
+              <td class="px-6 py-4">فرع الدار البيضاء</td>
+              <td class="px-6 py-4">شارع دكتور فير، الدار البيضاء</td>
+              <td class="px-6 py-4" dir="ltr">05 22 26 90 11</td>
+              <td class="px-6 py-4">9 صباحًا - 5 مساءً</td>
+            </tr>
+            <tr class="hover:bg-gray-50 transition-colors">
+              <td class="px-6 py-4">فرع الرباط</td>
+              <td class="px-6 py-4">شارع الحسن الثاني، الرباط</td>
+              <td class="px-6 py-4" dir="ltr">05 37 76 54 32</td>
+              <td class="px-6 py-4">9 صباحًا - 5 مساءً</td>
+            </tr>
+            <tr class="hover:bg-gray-50 transition-colors">
+              <td class="px-6 py-4">فرع مراكش</td>
+              <td class="px-6 py-4">شارع محمد الخامس، مراكش</td>
+              <td class="px-6 py-4" dir="ltr">05 24 44 77 88</td>
+              <td class="px-6 py-4">9 صباحًا - 5 مساءً</td>
+            </tr>
+            <tr class="hover:bg-gray-50 transition-colors">
+              <td class="px-6 py-4">فرع فاس</td>
+              <td class="px-6 py-4">شارع الاستقلال، فاس</td>
+              <td class="px-6 py-4" dir="ltr">05 35 63 29 10</td>
+              <td class="px-6 py-4">9 صباحًا - 5 مساءً</td>
+            </tr>
+            <tr class="hover:bg-gray-50 transition-colors">
+              <td class="px-6 py-4">فرع أكادير</td>
+              <td class="px-6 py-4">شارع الحسن الثاني، أكادير</td>
+              <td class="px-6 py-4" dir="ltr">05 28 23 45 67</td>
+              <td class="px-6 py-4">9 صباحًا - 5 مساءً</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- نموذج البحث عن الفروع -->
+      <div class="mt-12 bg-white rounded-2xl shadow-lg p-8" data-aos="fade-up">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-bold text-green-700 mb-6">ابحث عن أقرب فرع</h3>
+            <form id="branchSearchForm" class="space-y-4">
+              <div>
+                <label class="block text-gray-700 mb-2">المدينة</label>
+                <select id="citySelect" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500">
+                  <option value="casablanca" selected>الدار البيضاء</option>
+                  <option value="rabat">الرباط</option>
+                  <option value="marrakech">مراكش</option>
+                  <option value="fes">فاس</option>
+                  <option value="agadir">أكادير</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-gray-700 mb-2">المنطقة</label>
+                <input type="text" id="districtInput" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500" placeholder="أدخل اسم المنطقة">
+              </div>
+              <button type="submit" class="btn-primary w-full flex items-center justify-center gap-2">
+                <span>ابحث عن أقرب فرع</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+              </button>
+            </form>
+            <div id="searchResults" class="mt-6 space-y-4 hidden">
+              <div class="p-4 bg-green-50 rounded-lg">
+                <h4 class="font-bold text-green-800 mb-2">أقرب فرع إليك:</h4>
+                <div id="nearestBranchInfo"></div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div id="map" class="w-full h-[400px] rounded-xl shadow-inner"></div>
+            <div id="mapControls" class="absolute bottom-4 right-4 bg-white rounded-lg shadow-lg p-2 space-x-2 space-x-reverse">
+              <button onclick="zoomIn()" class="p-2 hover:bg-gray-100 rounded-lg">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                </svg>
+              </button>
+              <button onclick="zoomOut()" class="p-2 hover:bg-gray-100 rounded-lg">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Google Maps Script -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap" async defer></script>
+      <script src="assets/js/map.js"></script>
+    </div>
+  </section>
+
+  <!-- اتصل بنا -->
+  <section id="contact" class="bg-gradient-to-br from-green-50 to-green-100 py-20">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-green-800 mb-4">اتصل بنا</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">نحن هنا لمساعدتك. فريقنا جاهز للإجابة على استفساراتك</p>
+      </div>
+      
+      <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <!-- نموذج الاتصال -->
+        <div class="bg-white rounded-2xl shadow-xl p-4 sm:p-8" data-aos="fade-right">
+          <form class="space-y-4 sm:space-y-6">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="space-y-2">
+                <label class="block text-gray-700 font-semibold" for="fullName">الاسم الكامل</label>
+                <input 
+                  type="text" 
+                  id="fullName"
+                  name="fullName"
+                  class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 bg-white"
+                  placeholder="أدخل اسمك الكامل"
+                  required
+                >
+              </div>
+              <div class="space-y-2">
+                <label class="block text-gray-700 font-semibold" for="email">البريد الإلكتروني</label>
+                <input 
+                  type="email" 
+                  id="email"
+                  name="email"
+                  class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 bg-white"
+                  placeholder="أدخل بريدك الإلكتروني"
+                  required
+                >
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label class="block text-gray-700 font-semibold" for="subject">موضوع الرسالة</label>
+              <select 
+                id="subject"
+                name="subject"
+                class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 bg-white"
+                required
+              >
+                <option value="" disabled selected>اختر موضوع الرسالة</option>
+                <option value="funding">طلب تمويل</option>
+                <option value="inquiry">استفسار عام</option>
+                <option value="support">خدمة العملاء</option>
+                <option value="complaint">شكوى</option>
+                <option value="suggestion">اقتراح</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label class="block text-gray-700 font-semibold" for="message">رسالتك</label>
+              <textarea 
+                id="message"
+                name="message"
+                rows="4"
+                class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-500 bg-white resize-none"
+                placeholder="اكتب رسالتك هنا..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="w-full btn-primary group">
+              إرسال الرسالة
+              <svg class="w-5 h-5 inline-block transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-xl p-8" data-aos="fade-left">
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4">معلومات الاتصال</h3>
+              <div class="space-y-4">
+                <div class="flex items-start gap-4">
+                  <div class="p-3 bg-green-100 rounded-lg">
+                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold">الهاتف</h4>
+                    <p class="text-gray-600">+212 xxx xxx xxx</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="p-3 bg-green-100 rounded-lg">
+                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold">البريد الإلكتروني</h4>
+                    <p class="text-gray-600">contact@fbpmc.ma</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- الفوتر -->
+  <footer class="bg-white border-t">
+    <div class="container mx-auto px-6 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-lg font-bold mb-4">عن المؤسسة</h3>
+          <p class="text-gray-600">مؤسسة التوفيق للتمويل الأصغر، شريككم في التنمية المستدامة منذ 2000.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">روابط مهمة</h3>
+          <ul class="space-y-2">
+            <li><a href="#about" class="text-gray-600 hover:text-green-600">من نحن</a></li>
+            <li><a href="#services" class="text-gray-600 hover:text-green-600">خدماتنا</a></li>
+            <li><a href="#branches" class="text-gray-600 hover:text-green-600">فروعنا</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">الخدمات</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-600 hover:text-green-600">قرض الانطلاقة</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-green-600">قرض القروي</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-green-600">قرض إصلاح السكن</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-4">تواصل معنا</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>الهاتف: +212 522 434 949</li>
+            <li>البريد: contact@fbpmc.ma</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t mt-8 pt-8 text-center">
+        <p class="text-gray-600">© 2025 مؤسسة التوفيق للتمويل الأصغر. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+
+  <!-- سكريبت تبديل اللغة -->
+  <script>
+    let currentLang = 'ar';
+    let isAnimating = false;
+
+    function translatePage() {
+      document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        const translation = translations[currentLang][key];
+        
+        if (translation) {
+          if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+            element.placeholder = translation;
+          } else {
+            element.textContent = translation;
+          }
+        }
+      });
+    }
+
+    function updatePageDirection() {
+      document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+      document.body.style.textAlign = currentLang === 'ar' ? 'right' : 'left';
+    }
+
+    function switchLanguage() {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      // تبديل اللغة
+      currentLang = currentLang === 'ar' ? 'fr' : 'ar';
+      
+      // تحديث الاتجاه
+      updatePageDirection();
+      
+      // إضافة تأثير التحول
+      document.body.classList.add('page-transition');
+      
+      setTimeout(() => {
+        // ترجمة المحتوى
+        translatePage();
+        
+        // تحديث زر اللغة
+        const langButton = document.getElementById('langToggle');
+        const buttonText = langButton.querySelector('span');
+        buttonText.textContent = currentLang === 'ar' ? 'FR' : 'AR';
+
+        // تحديث الخطوط
+        document.body.classList.toggle('font-arabic');
+        document.body.classList.toggle('font-french');
+        
+        // إزالة تأثير التحول
+        document.body.classList.remove('page-transition');
+        isAnimating = false;
+      }, 300);
+    }
+
+    // تهيئة الترجمة عند تحميل الصفحة
+    document.addEventListener('DOMContentLoaded', () => {
+      translatePage();
+      updatePageDirection();
+    });
+  </script>
+</body>
+</html>
